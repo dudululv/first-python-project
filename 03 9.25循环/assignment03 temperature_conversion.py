@@ -1,0 +1,17 @@
+# 摄氏度与华氏度对照表
+# 从摄氏温度0度到250度，每隔20度为一项，不超过10条
+
+print("摄氏度(°C)    华氏度(°F)")
+print("------------------------")
+
+celsius = 0  # 起始摄氏温度
+count = 0    # 计数器，记录条目数
+
+while count < 10 and celsius <= 250:
+    # 计算华氏温度
+    fahrenheit = celsius * 9 / 5.0 + 32
+    # 输出对照表条目
+    print(f"{celsius:^10.0f}    {fahrenheit:^10.1f}")
+    # 更新摄氏温度和计数器
+    celsius += 20
+    count += 1
