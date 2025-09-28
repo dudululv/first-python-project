@@ -2,8 +2,6 @@
 x=10    #integer
 print(x,id(x),type(x))  
 j,k,l=1,2,3  #特别注意，python里不允许一个语句中出现两个赋值，所以这里不能写成j=1,k=2,l=3的形式，会报错
-print(j,k,l)  #打包packing和解包UNpacking的本质是有序序列，所以可以用tuple和list，但是不能用set
-j=k=l=1  #链式赋值chained assignment
 print(j,k,l)
 x=12.1  #float
 print(x,id(x),type(x))  #每当重定义一次数字变量，原数字进回收站，再次print只有新数字，没有原数字
