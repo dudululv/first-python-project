@@ -28,3 +28,4 @@ result = print("hello")  # print() 函数返回 None
 print(result)  # 输出: None
 
 input(None)
+

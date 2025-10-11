@@ -9,3 +9,6 @@ def add(n):              # 参数 n - 这是局部变量，与全局 n 同名但
 print(f"全局n初始地址: {id(n)}")
 n = add(n)               # 把返回值赋给全局 n
 print(f"全局n最终地址: {id(n)}")
+
+
+
