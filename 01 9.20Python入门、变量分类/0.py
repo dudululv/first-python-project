@@ -15,10 +15,10 @@ for i in range(8,1,1):
 print('='*20)
 x=11
 y=11
-print(id(x),id(y))
+print(id(x),id(y),x is y)
 m=12.1
 n=12.1
-print(id(m),id(n),m is n)
+print(id(m),id(n),m is n) #该项会在py文件与交互式环境中输出不同的结果
 a=[1,2]
 b=[1,2]
 print(a is b)
@@ -28,4 +28,3 @@ result = print("hello")  # print() 函数返回 None
 print(result)  # 输出: None
 
 input(None)
-
