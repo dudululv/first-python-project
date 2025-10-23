@@ -11,7 +11,7 @@ try:
         print("错误：三角形的边长必须为正数！")
     else:
         # 检查能否构成三角形（任意两边之和大于第三边，任意两边之差小于第三边）
-        if (a + b > c and a + c > b and b + c > a) and (abs(a - b) < c and abs(a - c) < b and abs(b - c) < a):
+        if a + b > c and a + c > b and b + c > a:
             print(f"{a}, {b}, {c}可以构成三角形。")
             
             # 使用海伦公式计算三角形的面积

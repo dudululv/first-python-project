@@ -110,9 +110,19 @@ digits = str(i)  # 转为字符串"12345"
 #                 s+=1
 # print(s)
 
-for rooster in range(0,21):
-    for hen in range(0,34):
+# for rooster in range(0,21):
+#     for hen in range(0,34):
         
-            chick=100-rooster-hen
-            if rooster*5+hen*3+chick/3==100:
-                print(rooster,hen,chick)
+#             chick=100-rooster-hen
+#             if rooster*5+hen*3+chick/3==100:
+#                 print(rooster,hen,chick)
+x=10
+def middle():
+    nonlocal x
+    x=x+1
+    def inner():
+        global x
+        x=x+1
+        print(x)
+    inner()
+print(middle())
