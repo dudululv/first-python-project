@@ -22,20 +22,20 @@ for i in list1:
     urls=tree.xpath('//div[@class="list"][2]/ul[@class="f-cb"]/li/a/@href')
     titles=tree.xpath('//div[@class="list"][2]/ul[@class="f-cb"]/li/a/@title')
     print(urls[0],titles[0])
-#     index=0
-#     for j in urls:
-#         r=requests.get('https://miaoso.com/bus/beijing/'+j)
+    index=0
+    for j in urls:
+        r=requests.get('https://miaoso.com/bus/beijing/'+j)
         
-#         t=etree.HTML(r.text)
-#         a=t.xpath('//ul[@id="x1"]//a/text()')
-#         print(titles[index]) #{'101路(百万庄西口-红庙路口东)':['红庙路口东'，'红庙路口西',,]}
-#         dict1[titles[index]]=a
-#         time.sleep(random.uniform(1.5,5.5))
-#         index+=1
-#         break
-#     break
-# print(dict1)
-# with open('公交线路.txt','w',encoding='utf-8') as file:
-#     for k,v in dict1.items():
-#       file.write(k+':'+'-'.join(v)+'\n')
-#     #break
+        t=etree.HTML(r.text)
+        a=t.xpath('//ul[@id="x1"]//a/text()')
+        print(titles[index]) #{'101路(百万庄西口-红庙路口东)':['红庙路口东'，'红庙路口西',,]}
+        dict1[titles[index]]=a
+        time.sleep(random.uniform(1.5,5.5))
+        index+=1
+        break
+    break
+print(dict1)
+with open('data/公交线路.txt','w',encoding='utf-8') as file:
+    for k,v in dict1.items():
+      file.write(k+':'+'-'.join(v)+'\n')
+    #break
